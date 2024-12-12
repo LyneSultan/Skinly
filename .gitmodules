@@ -4,3 +4,6 @@
 [submodule "nest-server"]
 	path = nest-server
 	url = https://github.com/LyneSultan/Skinly-server.git
+[submodule "django-server"]
+	path = django-server
+	url = https://github.com/LyneSultan/Skinly-models.git
