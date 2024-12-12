@@ -1,3 +1,6 @@
 [submodule "mobile-app"]
 	path = mobile-app
 	url = https://github.com/LyneSultan/Skinly-app.git
+[submodule "nest-server"]
+	path = nest-server
+	url = https://github.com/LyneSultan/Skinly-server.git
