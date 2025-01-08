@@ -7,12 +7,12 @@
 
 ###
 
-> An app that analyzes the user's skin type, evaluate the ingredients of skincare products, and compares them across various platforms.
->
-> Personalized Skincare Advisor aims to provide users with a personalized skincare experience by detecting skin type, analyzing the compatibility of ingredients with skin types, and searching for products across multiple platforms.
+> Skinly is an app that provides users with a personalized skincare experience by detecting skin type, analyzing the compatibility of ingredients with skin types, and searching for products across multiple platforms.
 
 
 ### User Stories
+#### User
+
 - As a user, I want to upload an image of my face, so I can detect my skin type.
 
 - As a user, I want to scan product ingredients using OCR, so I can see if they are suitable for my skin type.
@@ -20,11 +20,18 @@
 - As a user, I want to compare products across multiple online platforms to purchase the best skincare products.
 
 
-### Company Stories
+#### Company
+- As a company, I want to see my products listed on the platform.
+
 - As a company, I want to add advertisements for my products to increase visibility and sales.
 
-### Admin Stories
+- As a company, I want to preview my advertisements before publishing them to ensure accuracy and appeal.
+
+
+#### Admin
 - As an admin, I want to add and remove companies to manage partnerships effectively.
+
+- As an admin, I want to see the percentage and numbers of users engaging with the platform.
 
 - As an admin, I want to manage users to ensure a smooth and secure experience.
 
