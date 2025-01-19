@@ -66,7 +66,7 @@
 
 
 ### Mockups
-| Home screen  | Menu Screen | Order Screen |
+| Welcome screen  | Onboarding Screen | Home Screen |
 | ---| ---| ---|
 | ![Landing](./readme/mockup1.png) | ![fsdaf](./readme/mockup2.png) | ![fsdaf](./readme/mockup3.png) |
 
@@ -114,7 +114,7 @@
 | Login Screen  | User Management Screen |
 | ---| ---|
 | ![Landing](./readme/app/admin-login.png) | ![fsdaf](./readme/app/admin-users.png) |
-| Company Management Screen  |  Add New Company Screen |
+| Company Management Screen  | Add New Company Screen |
 | ![Landing](./readme/app/admin-companies.png) | ![fsdaf](./readme/app/admin-addCompany.png) |
 <br><br>
 
@@ -160,7 +160,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Get an OpenAI API Key
 2. Clone the repo
-   git clone [github](https://github.com/LyneSultan/Skinly.git)
+   git clone --recurse-submodules [github](https://github.com/LyneSultan/Skinly.git)
 3. Install NPM packages
    ```sh
    npm install
