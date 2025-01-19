@@ -62,22 +62,26 @@
 
 > We designed Skinly using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
-- Project Figma design [figma](https://www.figma.com/design/ttfDpBRMu1UyAUBhCscrGU/Skinly?node-id=4-7&node-type=frame&t=lAF5lspsO8l54lar-0)
+- Project Figma design [figma](https://www.figma.com/design/QMLETGiujnRpv5Vc193IZc/UI-UX-Assignments?node-id=117-417&p=f&t=hetwMb0YXQQht2Jd-0)
 
 
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |
 | ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/mockup1.png) | ![fsdaf](./readme/mockup2.png) | ![fsdaf](./readme/mockup3.png) |
 
 <br><br>
 
 <!-- Database Design -->
+
 <img src="./readme/title5.svg"/>
 
 ###  Architecting Data Excellence: Innovative Database Design Strategies:
 
 <!-- - Insert ER Diagram here -->
+| User Schema  | Company Schema | AiRequests Schema |
+| ---| ---| ---|
+| ![Landing](./readme/user-snapshot1.png) | ![fsdaf](./readme/company-snapshot1.png)| ![fsdaf](./readme/ai-snapshot1.png) |
 
 
 <br><br>
@@ -88,19 +92,30 @@
 
 
 ### User Screens (Mobile)
-| Login screen  | Register screen | Landing screen | Loading screen |
-| ---| ---| ---| ---|
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
-| Home screen  | Menu Screen | Order Screen | Checkout Screen |
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
+| Login screen  | OnBoarding screen | OnBoarding screen |
+| ---| ---| ---|
+| ![Landing](./readme/app/welcom-screen.jpeg) | ![fsdaf](./readme/app//onboarding1.jpeg) | ![fsdaf](./readme/app/onboarding2.jpeg) |
+| OnBoarding screen  | Login Screen | Register Screen |
+| ![Landing](./readme/app/onboarding3.jpeg) | ![fsdaf](./readme/app/login.jpeg) | ![fsdaf](./readme/app/register.jpeg) |
+| Forgot Password Screen  | Verification Code Screen | Reset Password Screen |
+| ![Landing](./readme/app/forget=password.jpeg) | ![fsdaf](./readme/app/verify.jpeg) | ![fsdaf](./readme/app/reseet.jpeg) |
+| Home screen  | Product Comparison Screen | Ingredients Scan Screen |
+| ![Landing](./readme/app/home.gif) | ![fsdaf](./readme/app/product.gif) | ![fsdaf](./readme/app/openai.gif) |
+| Skin Type Detection Screen  | Recommendations Screen | Profile Screen |
+| ![Landing](./readme/app/skin-detection-1.gif) | ![fsdaf](./readme/app/recommendations.jpeg) | ![fsdaf](./readme/app/profile.gif) |
+
+
+### Company Screens
+| Login Screen  | Home Screen |  Advertisement Creation Screen |
+| ---| ---| ---|
+| ![Landing](./readme/app/company-login.jpeg) | ![fsdaf](./readme/app/company-home.jpeg) | ![fsdaf](./readme/app/advertisment.jpeg) |
 
 ### Admin Screens (Web)
-| Login screen  | Register screen |  Landing screen |
-| ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
-| Home screen  | Menu Screen | Order Screen |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
-
+| Login Screen  | User Management Screen |
+| ---| ---|
+| ![Landing](./readme/app/admin-login.png) | ![fsdaf](./readme/app/admin-users.png) |
+| Company Management Screen  |  Add New Company Screen |
+| ![Landing](./readme/app/admin-companies.png) | ![fsdaf](./readme/app/admin-addCompany.png) |
 <br><br>
 
 
@@ -109,22 +124,25 @@
 
 ###  Mastering Interaction: Unveiling the Power of Prompt Engineering:
 
--
+This project leverages OpenAI to create intelligent interactions through precise prompts.<br>
+ It focuses on optimizing tasks like ingredient compatibility checks and personalized recommendations, highlighting the transformative power of AI-driven solutions.<br>
+ The goal is to showcase the power of AI-driven solutions for enhanced user experiences.
+
 <br><br>
 
 <!-- AWS Deployment -->
-<img src="./readme/title8.svg"/>
+<!-- <img src="./readme/title8.svg"/>
 
-###  Efficient Deployment: Unleashing the Potential with AWS Integration:
+###  Efficient Deployment: Unleashing the Potential with AWS Integration: -->
 
--
 
-<br><br>
+
+<!-- <br><br> -->
 
 <!-- Unit Testing -->
 
 <!-- How to run -->
-<!-- <img src="./readme/title10.svg"/>
+<img src="./readme/title10.svg"/>
 
 > To set up Skinly app locally, follow these steps:
 
@@ -140,16 +158,16 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at
+1. Get an OpenAI API Key
 2. Clone the repo
-   git clone [github](https://github.com/your_username_/Project-Name.git)
+   git clone [github](https://github.com/LyneSultan/Skinly.git)
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+4. Create a .env file in the root of the server project and add your environment variables and enter your API in
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   OPEN_AI_KEY = 'ENTER YOUR API';
    ```
 
-Now, you should be able to run Skinly app locally and explore its features. -->
+Now, you should be able to run Skinly app locally and explore its features.
