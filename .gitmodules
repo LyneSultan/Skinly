@@ -7,3 +7,6 @@
 [submodule "django-server"]
 	path = django-server
 	url = https://github.com/LyneSultan/Skinly-models.git
+[submodule "admin-panel"]
+	path = admin-panel
+	url = https://github.com/LyneSultan/skinly-admin-panel.git
