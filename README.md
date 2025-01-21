@@ -61,7 +61,7 @@
 
 - [String-Similarity](https://www.npmjs.com/package/string-similarity-js) is used to improve product search functionality by matching similar text strings, offering better comparison results.
 
-- [Teachable Machine]() is used for training machine learning models to integrate feature skin type classification.
+- [Teachable Machine](https://teachablemachine.withgoogle.com/) is used for training machine learning model to integrate skin type classification.
 
 - [JWT](https://jwt.io/) is utilized for authentication and session management.
 
