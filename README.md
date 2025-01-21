@@ -15,7 +15,7 @@
 
 - As a user, I want to upload an image of my face, so I can detect my skin type.
 
-- As a user, I want to scan product ingredients using OCR, so I can see if they are suitable for my skin type.
+- As a user, I want to scan product ingredients, so I can see if they are suitable for my skin type.
 
 - As a user, I want to compare products across multiple online platforms to purchase the best skincare products.
 
@@ -47,12 +47,23 @@
 
 - To handle backend routes and API calls, the app primarily uses [Nest.js](https://nestjs.com/), a progressive Node.js framework for building efficient, reliable and scalable server-side applications.
 
-  - [Django](https://www.djangoproject.com/) is utilized for specific functionalities, including OCR and detecting the user’s skin type using a trained model.
+- [Docker](https://www.docker.com/) is used to containerize the server, ensuring consistent environments for development and deployment, simplifying scaling, and improving overall application reliability.
 
-- The app uses [ React Native Paper](https://reactnativepaper.com/) for the design and front-end components, providing a modern, responsive, and accessible user interface based on Material Design principles.
-<!--
-- The app uses the font ["Poppins"](https://fonts.google.com/specimen/Poppins) as its main font, offering a clean and modern design aesthetic that aligns with the material design guidelines.
- -->
+- [Django](https://www.djangoproject.com/) is utilized for specific functionalities, including OCR and detecting the user’s skin type using a trained model.
+
+- [EasyOcr](https://github.com/JaidedAI/EasyOCR) an open-source Optical Character Recognition (OCR) library is utilized to extract text from images or scanned documents.
+
+- [OpenCV](https://opencv.org/), a popular computer vision library, is used for face detection. It utilizes the pre-trained classifier model to detect face counting in images.
+
+- The app uses [ React Native Paper](https://reactnativepaper.com/) for the design and front-end components, providing a modern, and accessible user interface based on Material Design principles.
+
+- The app integrates [OpenAI](https://openai.com/) for AI-powered features enhancing user interaction.
+
+- [String-Similarity](https://www.npmjs.com/package/string-similarity-js) is used to improve product search functionality by matching similar text strings, offering better comparison results.
+
+- [Teachable Machine]() is used for training machine learning models to integrate feature skin type classification.
+
+- [JWT](https://jwt.io/) is utilized for authentication and session management.
 
 <br><br>
 <!-- UI UX -->
@@ -76,7 +87,7 @@
 
 <img src="./readme/title5.svg"/>
 
-###  Architecting Data Excellence: Innovative Database Design Strategies:
+<!-- ###  Architecting Data Excellence: Innovative Database Design Strategies: -->
 
 <!-- - Insert ER Diagram here -->
 | User Schema  | Company Schema | AiRequests Schema |
@@ -128,46 +139,149 @@ This project leverages OpenAI to create intelligent interactions through precise
  It focuses on optimizing tasks like ingredient compatibility checks and personalized recommendations, highlighting the transformative power of AI-driven solutions.<br>
  The goal is to showcase the power of AI-driven solutions for enhanced user experiences.
 
+The app first processes the uploaded image by EasyOCR. The OCR extracts ingredient names, or product information converting it into text. Once the ingredients are extracted, the data is sent to OpenAI. OpenAI analyzes the data and checks the compatibility of ingredients.
+
+The app process the images using a pre-trained model (haarcascade_frontalface_default.xml) using OpenCV to detect number of faces within the image .If the count of faces detected is different than 1 the app will ask the user to retry. If one face detected the image wil be processed by skin type prediction model.Then this data is sent to OpenAI that generates personalized recommendations.
+
+
+<img src="./readme/app/prompt.png"/>
+
+<br><br>
+<!-- < AWS Deployment> -->
+ <img src="./readme/title8.svg"/>
+
+###  Efficient Deployment: Unleashing the Potential with AWS Integration:
+This project uses AWS for seamless deployment of the backend server EC2 instance, ensuring scalability, reliability, and performance.
+
+
+| Get Users  | Get Companies |
+| ---| ---|
+| ![Landing](./readme/app/getUsers1.png) | ![fsdaf](./readme/app/getCompanies1.png) |
+| Get Similar Product  | Products Pagination |
+| ![Landing](./readme/app/getSimilar1.png) | ![fsdaf](./readme/app/productPagination1.png) |
+
+
 <br><br>
 
-<!-- AWS Deployment -->
-<!-- <img src="./readme/title8.svg"/>
-
-###  Efficient Deployment: Unleashing the Potential with AWS Integration: -->
-
-
-
-<!-- <br><br> -->
-
-<!-- Unit Testing -->
-
-<!-- How to run -->
 <img src="./readme/title10.svg"/>
 
 > To set up Skinly app locally, follow these steps:
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+Ensure you have the following installed:
+
+* Install Node.js and npm (Node Package Manager):
   ```sh
   npm install npm@latest -g
   ```
+* Install Python (version 3.10 recommended)
 
-### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+#### Cloning the Repository
 
-1. Get an OpenAI API Key
-2. Clone the repo
+Run the following command to clone the repository and all its submodules
+
+   ```sh
    git clone --recurse-submodules [github](https://github.com/LyneSultan/Skinly.git)
-3. Install NPM packages
+   ```
+
+#### Server Configuration
+
+- Option 1: Manual Setup
+
+1. Navigate to skinly-server directory
+
+   ```sh
+   cd nest-server
+   ```
+
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Create a .env file in the root of the server project and add your environment variables and enter your API in
-   ```js
-   OPEN_AI_KEY = 'ENTER YOUR API';
+3.  Get an OpenAI API Key
+
+4. Run the following command and update the created .env file
+   ```sh
+   cp .env.example .env
+   ```
+5. Run Nestjs
+   ```sh
+   npm run start
+   ```
+- Option 2: Using Docker
+
+1. Ensure Docker is installed and running on your system.
+
+2. Pull the pre-built Docker image:
+   ```sh
+   docker pull lynesultan/skinly-server:latest
+   ```
+3. Run the Docker container:
+   ```sh
+   docker run -p 3000:3000 --env-file .env lynesultan/skinly-server:latest
    ```
 
-Now, you should be able to run Skinly app locally and explore its features.
+#### App Configuration
+
+1. Navigate to mobile-app directory
+
+   ```sh
+   cd mobile-app
+   ```
+
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run Nestjs
+   ```sh
+   npm run start
+   ```
+4. Test on a Device or Emulator:
+
+* Physical Device: Install the Expo Go app from the App Store or Google Play. Use the QR code from the development server to open the app on your device.
+* Emulator: Ensure your emulator (Android or iOS) is running, then select the appropriate option in the Expo development server interface.
+
+#### Django Configuration
+
+1. Navigate to django-server directory
+
+   ```sh
+   cd django-server
+   ```
+
+2. Create and Activate a Virtual Environment
+   ```sh
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+3. Install Dependencies
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Run the Server
+   ```sh
+   python manage.py runserver
+   ```
+
+#### Admin App Configuration
+
+1. Navigate to admin-panel directory
+   ```sh
+   cd admin-panel
+   ```
+
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the following command and update the created .env file
+   ```sh
+   cp .env.example .env
+   ```
+4. Run project
+   ```sh
+   npm run start
+   ```
