@@ -188,8 +188,6 @@ Run the following command to clone the repository and all its submodules
 
 #### Server Configuration
 
-- Option 1: Manual Setup
-
 1. Navigate to skinly-server directory
 
    ```sh
@@ -209,18 +207,6 @@ Run the following command to clone the repository and all its submodules
 5. Run Nestjs
    ```sh
    npm run start
-   ```
-- Option 2: Using Docker
-
-1. Ensure Docker is installed and running on your system.
-
-2. Pull the pre-built Docker image:
-   ```sh
-   docker pull lynesultan/skinly-server:latest
-   ```
-3. Run the Docker container:
-   ```sh
-   docker run -p 3000:3000 --env-file .env lynesultan/skinly-server:latest
    ```
 
 #### App Configuration
