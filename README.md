@@ -71,7 +71,7 @@
 
 ###
 
-> We designed Skinly using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+> Skinly is designed using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 - Project Figma design [figma](https://www.figma.com/design/QMLETGiujnRpv5Vc193IZc/UI-UX-Assignments?node-id=117-417&p=f&t=hetwMb0YXQQht2Jd-0)
 
@@ -87,7 +87,7 @@
 
 <img src="./readme/title5.svg"/>
 
-<!-- ###  Architecting Data Excellence: Innovative Database Design Strategies: -->
+###  Database Schema Design:
 
 <!-- - Insert ER Diagram here -->
 | User Schema  | Company Schema | AiRequests Schema |
@@ -133,15 +133,15 @@
 <!-- Prompt Engineering -->
 <img src="./readme/title7.svg"/>
 
-###  Mastering Interaction: Unveiling the Power of Prompt Engineering:
+###
+<!-- ###  Mastering Interaction: Unveiling the Power of Prompt Engineering: -->
 
-This project leverages OpenAI to create intelligent interactions through precise prompts.<br>
- It focuses on optimizing tasks like ingredient compatibility checks and personalized recommendations, highlighting the transformative power of AI-driven solutions.<br>
- The goal is to showcase the power of AI-driven solutions for enhanced user experiences.
+This project uses OpenAI to optimize tasks like ingredient compatibility checks and personalized recommendations, highlighting the transformative power of AI-driven solutions.<br>
+ The goal is to use AI-driven solutions to enhance user experiences.
 
-The app first processes the uploaded image by EasyOCR. The OCR extracts ingredient names, or product information converting it into text. Once the ingredients are extracted, the data is sent to OpenAI. OpenAI analyzes the data and checks the compatibility of ingredients.
+To check ingredients, the app first processes the uploaded image by EasyOCR. The OCR extracts ingredient names, or product information converting it into text. Once the ingredients are extracted, the data is sent to OpenAI. OpenAI analyzes the data and checks the compatibility of ingredients.
 
-The app process the images using a pre-trained model (haarcascade_frontalface_default.xml) using OpenCV to detect number of faces within the image .If the count of faces detected is different than 1 the app will ask the user to retry. If one face detected the image wil be processed by skin type prediction model.Then this data is sent to OpenAI that generates personalized recommendations.
+To get personalized recommendations, the app processes the images using a pre-trained model (haarcascade_frontalface_default.xml) using OpenCV to detect number of faces within the image. If the count of faces detected is different than 1 the app will ask the user to retry. If one face detected the image wil be processed by skin type prediction model.Then this data is sent to OpenAI that generates personalized recommendations.
 
 
 <img src="./readme/app/prompt.png"/>
@@ -150,8 +150,10 @@ The app process the images using a pre-trained model (haarcascade_frontalface_de
 <!-- < AWS Deployment> -->
  <img src="./readme/title8.svg"/>
 
-###  Efficient Deployment: Unleashing the Potential with AWS Integration:
-This project uses AWS for seamless deployment of the backend server EC2 instance, ensuring scalability, reliability, and performance.
+###
+<!-- ###  Efficient Deployment: Unleashing the Potential with AWS Integration: -->
+This project uses AWS for seamless deployment of the backend server EC2 instance, ensuring scalability, reliability, and performance.<br>
+API endpoints are tested using Postman
 
 
 | Get Users  | Get Companies |
@@ -164,6 +166,8 @@ This project uses AWS for seamless deployment of the backend server EC2 instance
 <br><br>
 
 <img src="./readme/title10.svg"/>
+
+###
 
 > To set up Skinly app locally, follow these steps:
 
